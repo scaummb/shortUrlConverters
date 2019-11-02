@@ -1,0 +1,10 @@
+提供两种方法：
+1）java代码自动化生成：
+  1.1 maven依赖： jooq-3.8.0.jar、jooq-codegen-3.8.0.jar、jooq-meta-3.8.0.jar、mysql-connector-java-5.1.39.jar
+  1.2 执行JOOQGenerator.main方法
+
+2）命令行自动化生成：
+  1.1 文件放到同一路径下：jooq-3.8.0.jar、jooq-codegen-3.8.0.jar、jooq-meta-3.8.0.jar、mysql-connector-java-5.1.39.jar、jooq-config.xml
+  1.2 执行命令：java -cp jooq-3.8.0.jar\;jooq-codegen-3.8.0.jar\;jooq-meta-3.8.0.jar\;mysql-connector-java-5.1.39.jar\; org.jooq.util.GenerationTool jooq-config.xml
+
+参考：https://blog.csdn.net/zhouzhiwengang/article/details/73478916
