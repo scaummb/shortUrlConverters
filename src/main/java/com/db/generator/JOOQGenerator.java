@@ -84,11 +84,11 @@ public class JOOQGenerator extends JavaGenerator {
 		genTables("sys_user", "com.core.pojo.entity", ".*", "");
 	}
 
-	public static void main(String[] args) throws Exception {
-
-		generate();
-
-	}
+//	public static void main(String[] args) throws Exception {
+//
+//		generate();
+//
+//	}
 
 
 }

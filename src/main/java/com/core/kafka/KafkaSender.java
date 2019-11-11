@@ -22,7 +22,6 @@ public class KafkaSender {
 	@Autowired
 	private KafkaTemplate<String, String> kafkaTemplate;
 
-	private final static String KAFKA_TOPIC = "ShortUrlConverterTopic";
 
 	/*
 	 * 发送消息方法
@@ -32,6 +31,6 @@ public class KafkaSender {
 		message.setMsg(UUID.randomUUID().toString());
 		message.setSendTime(new Date());
 		LOGGER.info("send kafka message = {}", message.toString());
-		kafkaTemplate.send(KAFKA_TOPIC, String.valueOf(message.getId()%10000000), message.toString());
+		kafkaTemplate.send(KafkaConstants.KAFKA_TOPIC, String.valueOf(message.getId()%10000000), message.toString());
 	}
 }

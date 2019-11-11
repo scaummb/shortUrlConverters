@@ -16,9 +16,7 @@ import java.util.Optional;
 public class KafkaReceiver {
 	private final Logger LOGGER = LoggerFactory.getLogger(KafkaReceiver.class);
 
-	private final static String KAFKA_TOPIC = "ShortUrlConverterTopic";
-
-	@KafkaListener(topics = {KAFKA_TOPIC})
+	@KafkaListener(topics = {KafkaConstants.KAFKA_TOPIC})
 	public void listen(ConsumerRecord<?, ?> record) {
 		Optional<?> kafkaMessage = Optional.ofNullable(record.value());
 		if (kafkaMessage.isPresent()) {
